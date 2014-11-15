@@ -20,11 +20,12 @@ class MainViewController: UIViewController {
         var previewSquareSize = view.bounds.size.width
         var topAndBottomViewHeight = (view.bounds.size.height-previewSquareSize)/2
         
-        var topBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        var blurEffect = UIBlurEffect(style: .Dark)
+        var topBlurView = UIVisualEffectView(effect: blurEffect)
         topBlurView.frame = CGRect(x: 0, y: 0, width: previewSquareSize, height: topAndBottomViewHeight)
         view.addSubview(topBlurView)
         
-        var bottomBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .Light))
+        var bottomBlurView = UIVisualEffectView(effect: blurEffect)
         bottomBlurView.frame = CGRect(x: 0, y: view.bounds.size.height-topAndBottomViewHeight, width: previewSquareSize, height: topAndBottomViewHeight)
         view.addSubview(bottomBlurView)
     }
